@@ -11,7 +11,7 @@
 <?php
 
 session_start();
-	require("conexion.php");
+	require("conexion.html");
 
 	$username=$_POST['mail'];
 	$pass=$_POST['pass'];
@@ -25,7 +25,7 @@ session_start();
 			$_SESSION['rol']=$f2['rol'];
 
 			echo '<script>alert("ADMINISTRADOR")</script> ';
-			echo "<script>location.href='inicio.php'</script>";
+			echo "<script>location.href='inicio.html'</script>";
 		
 		}
 	}
@@ -38,17 +38,17 @@ session_start();
 			$_SESSION['user']=$f['user'];
 			$_SESSION['rol']=$f['rol'];
 
-			header("Location: inicio.php");
+			header("Location: inicio.html");
 		}else{
 			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
 		
-			echo "<script>location.href='index.php'</script>";
+			echo "<script>location.href='index.html'</script>";
 		}
 	}else{
 		
 		echo '<script>alert("ESTE USUARIO NO EXISTE, PORFAVOR REGISTRESE PARA PODER INGRESAR")</script> ';
 		
-		echo "<script>location.href='registro.php'</script>";	
+		echo "<script>location.href='registro.html'</script>";	
 
 	}
 
